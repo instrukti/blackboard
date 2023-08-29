@@ -1,0 +1,80 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "build": {
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev",
+    "devPath": "http://localhost:5173",
+    "distDir": "../build"
+  },
+  "package": {
+    "productName": "Blackboard",
+    "version": "0.1.0"
+  },
+
+  "tauri": {
+    "allowlist": {
+      "fs": {
+        "all": true,
+        "scope": ["$DOCUMENT/**", "$DOCUMENT/InstruktiFiles/**", "$DOCUMENT/.*", "$DOCUMENT/InstruktiFiles/.*"]
+      },
+      "path": {
+        "all": true
+      },
+      "dialog": {
+        "open": true,
+        "save": true
+      },
+      "window": {
+        "show": true,
+        "hide": true,
+        "setFullscreen": true,
+        "create": true,
+        "close": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"],
+      "identifier": "com.instrukti.meet",
+      "longDescription": "",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "label": "main",
+        "fullscreen": false,
+        "minHeight": 900,
+        "minWidth": 1200,
+        "resizable": true,
+        "title": "Blackboard",
+        "maximized": true
+      }
+    ]
+  }
+}
