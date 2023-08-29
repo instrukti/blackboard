@@ -1,38 +1,25 @@
-# create-svelte
+# Blackboard
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is a whiteboard(blackboard) project made with sveltekit, tauri and konva. It's intended to be a foundation to build similar projects, but it is in no way a production ready app.
 
-## Creating a project
+# Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+1. Draw shapes like, lines, curves, rectangles, circle/ellipses, polygons.
+2. Place texts and edit (Double click to edit)
+3. Shapes can be moved around and resized.
+   - _Moving the lines, freeform curves and polygons doesn't work for some reason. It has probably to do with Konva.Line configuration since all these shapes are built on Konva.Line._
+4. Take screenshots.
+   - _On Mac, it requires some permissions. Might not be the case on Windows and linux, not tested._
+5. Copy and paste images on the board (CTRL+V / COMMAND + V)
+6. Timer
+7. Save and load saved boards.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+# Installing
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+You can find the executables in the releases sections.
 
-## Developing
+# Build it from source
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+1. Clone the repo `git@github.com:instrukti/blackboard.git`
+2. Install dependencies `cd blackboard && npm i`
+3. Run the app `npm run tauri dev` or install and run `npm run tauri build`
